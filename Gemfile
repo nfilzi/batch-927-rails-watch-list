@@ -11,6 +11,8 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 gem "bootsnap", require: false
 
+gem "pry-byebug"
+
 # frontend
 gem "sassc-rails"
 gem "autoprefixer-rails"

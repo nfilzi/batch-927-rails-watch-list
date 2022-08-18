@@ -10,14 +10,24 @@
 <div class="p-2">
   <h2>Movies in this list</h2>
   <div class="cards">
-    <% @list.movies.each do |movie| %>
+    <% @list.bookmarks.each do |bookmark| %>
       <div class="card-movie">
-        <%= image_tag movie.poster_url, alt: "alttext", width: 100 %>
+        <%= image_tag bookmark.movie.poster_url, alt: "alttext", width: 100 %>
         <div class="card-movie-body">
-          <h2><%= movie.title %></h2>
-          <p><%= movie.overview %></p>
+          <h2><%= bookmark.movie.title %></h2>
+          <p><%= bookmark.movie.overview %></p>
         </div>
+
+        <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete} do %>
+          <i class="fa-solid fa-dumpster"></i>
+        <% end -%>
       </div>
     <% end %>
+
+    <%= link_to new_list_bookmark_path(@list) do %>
+      <div class="card-movie card-add-movie">
+        <h2><i class="fa-solid fa-circle-plus me-2"></i>Bookmark a movie</h2>
+      </div>
+    <% end -%>
   </div>
 </div>

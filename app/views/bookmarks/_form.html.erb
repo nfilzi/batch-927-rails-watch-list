@@ -1,0 +1,7 @@
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <div class="d-flex justify-content-end">
+    <%= f.button :submit  %>
+  </div>
+<% end -%>
