@@ -1,0 +1,12 @@
+<h1>All the lists</h1>
+
+<div class="cards">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+      <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.banner_url %>)">
+        <%= list.name %>
+        <i class="fa-solid fa-clapperboard"></i><%= list.movies.count %>
+      </div>
+    <% end -%>
+  <% end -%>
+</div>

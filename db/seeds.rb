@@ -8,20 +8,21 @@ Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells
 Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
 lotr = Movie.create!(
-  title:    "LORT - The Fellowship of The Ring",
+  title:    "LOTR - The Fellowship of The Ring",
   overview: "Dwarves, elves & orcs fighting",
-  # poster_url: "",
+  poster_url: "https://m.media-amazon.com/images/I/71I-wh09xFL._AC_SL1024_.jpg",
   rating:   10,
 )
 
 lotr_2 = Movie.create!(
-  title:    "LORT - The Two Towers",
+  title:    "LOTR - The Two Towers",
   overview: "Dwarves, elves & orcs fighting, again!",
-  # poster_url: "",
+  poster_url: "https://img.fruugo.com/product/4/11/142404114_max.jpg",
   rating:   9,
 )
 
-epic_fantasy = List.create!(name: 'Epic fantasy')
+epic_fantasy = List.create!(name: 'Epic fantasy', banner_url: "https://c4.wallpaperflare.com/wallpaper/1002/678/554/concept-art-banner-video-games-horns-wallpaper-thumb.jpg")
+horror = List.create!(name: 'Horror', banner_url: "https://media.istockphoto.com/vectors/banner-for-horror-movie-festival-scary-cinema-vector-id1146422893?k=20&m=1146422893&s=170667a&w=0&h=D7Woc_AXtxL7JUEF4ZfgQqb0VWhRwJWmNqh5CagMQfc=")
 
 Bookmark.create!(
   movie:   lotr,

@@ -1,0 +1,23 @@
+<%= link_to "All lists", root_path, class: "btn btn-dark" %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @list.banner_url %>);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
+
+
+<div class="p-2">
+  <h2>Movies in this list</h2>
+  <div class="cards">
+    <% @list.movies.each do |movie| %>
+      <div class="card-movie">
+        <%= image_tag movie.poster_url, alt: "alttext", width: 100 %>
+        <div class="card-movie-body">
+          <h2><%= movie.title %></h2>
+          <p><%= movie.overview %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
